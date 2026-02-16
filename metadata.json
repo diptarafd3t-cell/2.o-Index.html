@@ -1,0 +1,8 @@
+{
+  "name": "Dip-Tarafder™ // FLOATING_APEX Portfolio",
+  "description": "A high-performance, cyber-luxury portfolio for Dip Tarafder, featuring architectural full-stack engineering and integrated AI assistance.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
