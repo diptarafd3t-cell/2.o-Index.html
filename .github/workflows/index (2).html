@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dip-Tarafder™ | Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,900&family=Playwrite+NZ+Guides&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        :root {
+            --accent-orange: #FF8C00;
+            --primary-purple: #6D28D9;
+            --surface-dark: #0A0A0B;
+            --text-main: #F4F4F5;
+            --text-dim: #A1A1AA;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--surface-dark); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+
+        /* Navigation */
+        nav { 
+            position: fixed; top: 0; width: 100%; z-index: 1000; padding: 1.5rem 8%; 
+            display: flex; justify-content: space-between; align-items: center; 
+            background: rgba(10, 10, 11, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .nav-brand-group { display: flex; align-items: center; gap: 20px; }
+        .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; color: var(--accent-orange); text-decoration: none; }
+        
+        .social-link { color: var(--text-dim); font-size: 1.2rem; transition: var(--transition); text-decoration: none; }
+        .social-link:hover { color: var(--accent-orange); transform: translateY(-3px); }
+
+        /* Hero Section */
+        .hero { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; padding: 0 10%; background: radial-gradient(circle at top right, #2D0A50, transparent), #000; overflow: hidden; }
+        
+        .hero-profile { 
+            position: relative; 
+            width: 350px; 
+            height: 350px; 
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
+            /* YOUR HIGH-RES PHOTO INTEGRATED BELOW */
+            background: url('https://files.catbox.moe/pvhclm.jpg') center/cover;
+            box-shadow: 0 0 100px rgba(109, 40, 217, 0.3); 
+            animation: morph 8s ease-in-out infinite; 
+            border: 1px solid var(--glass-border); 
+        }
+
+        @keyframes morph { 0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; } 50% { border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%; } }
+
+        .hero-text { margin-left: 60px; max-width: 600px; }
+        .hero-text h1 { font-size: 5rem; font-weight: 800; letter-spacing: -3px; margin: 10px 0; text-transform: uppercase; }
+
+        /* Expertise Grid */
+        .need-me { padding: 120px 10%; background: #000; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 300px; gap: 20px; }
+        .card { background: var(--glass); border: 1px solid var(--glass-border); padding: 40px; border-radius: 24px; transition: var(--transition); display: flex; flex-direction: column; justify-content: flex-end; position: relative; overflow: hidden; }
+        .card:hover { background: rgba(255, 255, 255, 0.07); transform: translateY(-10px) scale(1.02); border-color: var(--primary-purple); }
+        .card-large { grid-column: span 2; }
+
+        /* Buttons */
+        .btn-master { background: linear-gradient(45deg, var(--primary-purple), #9333EA); color: white; padding: 20px 50px; border: none; border-radius: 100px; font-weight: 800; text-transform: uppercase; cursor: pointer; transition: var(--transition); box-shadow: 0 10px 30px rgba(109, 40, 217, 0.4); text-decoration: none; display: inline-block; }
+        .btn-master:hover { transform: scale(1.05); filter: brightness(1.1); }
+        
+        .contact-container { background: #0A0A0B; padding: 100px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; border-top: 1px solid var(--glass-border); }
+        .input-group input, .input-group textarea { background: var(--glass); border: 1px solid var(--glass-border); color: white; padding: 20px; border-radius: 12px; width: 100%; margin-bottom: 15px; }
+
+        @media (max-width: 1024px) { 
+            .grid { grid-template-columns: 1fr; grid-auto-rows: auto; } 
+            .card-large { grid-column: span 1; } 
+            .hero { flex-direction: column; text-align: center; height: auto; padding: 150px 5%; } 
+            .hero-text { margin: 40px 0 0 0; } 
+            .contact-container { grid-template-columns: 1fr; } 
+            .nav-brand-group { gap: 10px; }
+            .hero-text h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-brand-group">
+            <a href="https://www.facebook.com/share/16wEwTXXP6/" target="_blank" class="logo">DIP-TARAFDER™</a>
+            <a href="https://www.linkedin.com/in/love-maker-188a6a328" target="_blank" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://wa.me/8801704235825" target="_blank" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <a href="mailto:diptarafd3t@gmail.com" class="btn-master" style="padding: 10px 25px; font-size: 0.7rem;">Hire Me</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-profile"></div>
+        <div class="hero-text">
+            <span style="font-family: 'Playwrite NZ Guides', cursive; font-size: 1.2rem; color: var(--primary-purple);">#Dip's-Profile</span>
+            <h1 style="font-family: 'Playfair Display'; color: var(--accent-orange); text-transform: none; font-style: italic; font-size: 3.5rem; margin-bottom: 0;">Engineering</h1>
+            <h1 style="margin-top: 0;"><span style="font-size: 3.5rem; display: block;">Programmer</span></h1>
+            <p style="color: var(--text-dim); font-size: 1.1rem; margin-top: 15px;">IF YOU NEED THEN CONNECT WITH ME</p>
+        </div>
+    </section>
+
+    <section class="projects" style="padding: 100px 10%; background: #050505;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px;">
+            <div>
+                <h3 style="color: var(--accent-orange); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 10px;">Portfolio Selection</h3>
+                <h2 style="font-size: 3.5rem; font-weight: 800; line-height: 1;">Featured <br>Deployments</h2>
+            </div>
+            <p style="color: var(--text-dim); max-width: 400px; text-align: right;">Dip®.web</p>
+        </div>
+
+        <div class="project-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+            <div class="project-card" style="position: relative; border-radius: 30px; overflow: hidden; background: #111; height: 500px; transition: var(--transition); border: 1px solid var(--glass-border); cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=1000" class="p-img" style="width:100%; height:100%; object-fit:cover; opacity:0.6; transition: var(--transition);">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 40px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); backdrop-filter: blur(5px);">
+                    <h4 style="font-size: 1.8rem;">Neural Ledger ™</h4>
+                    <p style="color: var(--text-dim);">Automated asset management system.</p>
+                </div>
+            </div>
+            <div class="project-card" style="position: relative; border-radius: 30px; overflow: hidden; background: #111; height: 500px; transition: var(--transition); border: 1px solid var(--glass-border); cursor: pointer;">
+                <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1000" class="p-img" style="width:100%; height:100%; object-fit:cover; opacity:0.6; transition: var(--transition);">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 40px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); backdrop-filter: blur(5px);">
+                    <h4 style="font-size: 1.8rem;">Core Vision ™</h4>
+                    <p style="color: var(--text-dim);">Industrial AI computer vision pipeline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="need-me">
+        <h2 style="font-size: 3rem; margin-bottom: 60px;">Expertise Grid</h2>
+        <div class="grid">
+            <div class="card card-large"><i class="fa-solid fa-layer-group"></i><h3>Architecture</h3><p><strong>Scalable Backend Systems</strong></p></div>
+            <div class="card"><i class="fa-solid fa-code"></i><h3>Dev</h3><p><strong>Full-Stack</strong></p></div>
+            <div class="card"><i class="fa-solid fa-cloud"></i><h3>Cloud</h3><p><strong>Native Infra</strong></p></div>
+            <div class="card card-large"><i class="fa-solid fa-microchip"></i><h3>Innovation</h3><p><strong>AI Integration</strong></p></div>
+        </div>
+    </section>
+
+    <section class="contact-container">
+        <div>
+            <h2 style="font-family: 'Playfair Display'; font-size: 4rem; color: var(--accent-orange);">Let's Build</h2>
+            <p style="color: var(--text-dim); font-size: 1.2rem;">Ready to elevate your digital presence?</p>
+        </div>
+        <div class="input-group">
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email Address">
+            <textarea rows="5" placeholder="Project Description"></textarea>
+            <a href="mailto:diptarafd3t@gmail.com" class="btn-master" style="width: 100%; display: block; padding: 20px 0; text-align: center;">mail@dip</a>
+        </div>
+    </section>
+
+    <footer style="padding: 80px 10%; border-top: 1px solid var(--glass-border); text-align: center; color: var(--text-dim);">
+        <p>&copy; 2026 DIP-TARAFDER™ . ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>
+
